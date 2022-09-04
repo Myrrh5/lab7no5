@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function Add(){
+           
+            var r = document.createElement("tr")
+
+           
+            var name = document.getElementById("Name")
+            var nameinput = name.value
+            var td = document.createElement("td")
+            td.innerHTML = nameinput;
+            var ta = document.getElementById("table")
+            ta.appendChild(td)
+
+            
+            var home = document.getElementById("Address")
+            var homeinput = home.value;
+            var td = document.createElement("td");
+            td.innerHTML = homeinput;
+            var ta = document.getElementById("table");
+            ta.appendChild(td);
+
+       
+            var tel = document.getElementById("Tel");
+            var telinput = tel.value;
+            var td = document.createElement("td");
+            td.innerHTML =telinput;
+            var ta = document.getElementById("table");
+            ta.appendChild(td);
+
+            table.appendChild(r)
+        }
+    </script>
+</head>
+<body>
+    <form >
+        <label>ชื่อลูกค้า :</label><input type="text" id="Name"><br>
+        <label>ที่อยู่ :</label><input type="text" name="" id="Address"><br>
+        <label>โทรศัพย์ :</label><input type="tel" name="" id="Tel"><br>
+        <input type="button" value="เพิ่ม" onclick="Add()"><br><br>
+
+       <table id="table">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพย์</th>
+        </tr>
+       </table>      
+    </form>
+</body>
+</html>
